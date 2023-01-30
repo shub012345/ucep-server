@@ -1,2 +1,1 @@
 # ucep-server
-ucep

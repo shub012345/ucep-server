@@ -1,0 +1,29 @@
+server:
+  port: 9088
+
+spring:
+  data:
+    mongodb:
+        uri: mongodb://ucep-server:I4iwsXPiDx5uf6EloIn0boF4m2Z0lvt5F9QcrwcdNZjCqCOITbRyQ4H70A177cGCb606vc53yVCPACDbTdKjcQ==@ucep-server.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@ucep-server@
+        database: ucep
+#       authentication-database: admin
+#       username: admin
+#       password: Ped@l123
+#       database: ucep
+#       port: 27017
+#       host: localhost
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  servlet:
+    multipart:
+      max-file-size: 256MB
+      max-request-size: 256MB
+      enabled: true
+  rabbitmq:
+    addresses: localhost:5672
+  batch:
+    job:
+      enabled: false
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
